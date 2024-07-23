@@ -1,0 +1,64 @@
+@import './variables.scss';
+
+.todo-item {
+  display: flex;
+  align-items: center;
+  gap: $spacing-small;
+  padding: $spacing-small;
+  background-color: white;
+  border: 1px solid $border-color;
+  border-radius: $border-radius;
+  margin-bottom: $spacing-small;
+  box-shadow: $box-shadow;
+
+  input[type='checkbox'] {
+    cursor: pointer;
+  }
+
+  button {
+    padding: $spacing-small $spacing-medium;
+    background-color: $secondary-color;
+    border: none;
+    border-radius: $border-radius;
+    color: white;
+    cursor: pointer;
+    font-size: 14px;
+    margin-left: $spacing-small;
+
+    &:hover {
+      background-color: darken($secondary-color, 10%);
+    }
+  }
+
+  // Mobile styles
+  @media (max-width: $breakpoint-mobile) {
+    flex-direction: column; // Stack items vertically
+    align-items: flex-start;
+
+    button {
+      width: 100%;
+      margin-left: 0;
+      margin-top: $spacing-small;
+    }
+  }
+
+  // Tablet styles
+  @media (min-width: #{$breakpoint-mobile + 1}) and (max-width: $breakpoint-tablet) {
+    flex-direction: row; // Horizontal layout
+    align-items: center;
+
+    button {
+      margin-left: $spacing-small;
+    }
+  }
+
+  // Desktop styles
+  @media (min-width: #{$breakpoint-tablet + 1}) {
+    flex-direction: row; // Horizontal layout
+    align-items: center;
+
+    button {
+      margin-left: $spacing-small;
+    }
+  }
+}

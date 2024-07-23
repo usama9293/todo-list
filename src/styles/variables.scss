@@ -1,0 +1,35 @@
+// _variables.scss
+
+// Font stack
+$font-stack: Arial, sans-serif;
+
+// Primary color (used for buttons, highlights, etc.)
+$primary-color: #4caf50;
+
+// Secondary color (used for accent elements, warnings, etc.)
+$secondary-color: #ff5722;
+
+// Background colors
+$background-light: #f9f9f9;
+$background-dark: #333;
+
+// Text colors
+$text-color-primary: #333;
+$text-color-secondary: #666;
+
+// Borders
+$border-color: #ddd;
+
+// Border radius for rounded corners
+$border-radius: 4px;
+
+// Spacing
+$spacing-small: 8px;
+$spacing-medium: 16px;
+$spacing-large: 24px;
+
+// Shadows
+$box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+$breakpoint-mobile: 480px;
+$breakpoint-tablet: 768px;
+$breakpoint-desktop: 1024px;

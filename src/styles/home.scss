@@ -1,0 +1,50 @@
+@import './variables.scss';
+
+.home {
+  font-family: $font-stack;
+  padding: $spacing-medium;
+  background-color: $background-light;
+
+  h1 {
+    color: $primary-color;
+    text-align: center;
+    margin-bottom: $spacing-large;
+  }
+
+  ul {
+    list-style-type: none;
+    padding: 0;
+
+    li {
+      margin-bottom: $spacing-small;
+    }
+  }
+
+  // Mobile styles
+  @media (max-width: $breakpoint-mobile) {
+    padding: $spacing-small;
+
+    h1 {
+      font-size: 1.5rem;
+      margin-bottom: $spacing-medium;
+    }
+  }
+
+  // Tablet styles
+  @media (min-width: #{$breakpoint-mobile + 1}) and (max-width: #{$breakpoint-tablet}) {
+      padding: $spacing-medium;
+  
+      h1 {
+          font-size: 2rem;
+      }
+  }
+  
+  // Desktop styles
+  @media (min-width: #{$breakpoint-tablet + 1}) {
+      padding: $spacing-large;
+  
+      h1 {
+          font-size: 2.5rem;
+      }
+  }
+}

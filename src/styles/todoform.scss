@@ -1,0 +1,72 @@
+@import './variables.scss';
+
+.todo-form {
+  display: flex;
+  flex-direction: column; // Change to column layout for small screens
+  gap: $spacing-small;
+  margin-bottom: $spacing-medium;
+
+  input {
+    flex-grow: 1;
+    padding: $spacing-small;
+    border: 1px solid $border-color;
+    border-radius: $border-radius;
+    font-size: 16px;
+  }
+
+  button {
+    padding: $spacing-small $spacing-medium;
+    background-color: $primary-color;
+    border: none;
+    border-radius: $border-radius;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+
+    &:hover {
+      background-color: darken($primary-color, 10%);
+    }
+  }
+
+  // Mobile styles
+  @media (max-width: $breakpoint-mobile) {
+    flex-direction: column; // Stack inputs and buttons vertically
+    gap: $spacing-small;
+
+    input {
+      font-size: 14px;
+    }
+
+    button {
+      font-size: 14px;
+    }
+  }
+
+  // Tablet styles
+  @media (min-width: #{$breakpoint-mobile + 1}) and (max-width: $breakpoint-tablet) {
+    flex-direction: row; // Arrange inputs and buttons side by side
+    gap: $spacing-medium;
+
+    input {
+      font-size: 15px;
+    }
+
+    button {
+      font-size: 15px;
+    }
+  }
+
+  // Desktop styles
+  @media (min-width: #{$breakpoint-tablet + 1}) {
+    flex-direction: row; // Ensure row layout for larger screens
+    gap: $spacing-medium;
+
+    input {
+      font-size: 16px;
+    }
+
+    button {
+      font-size: 16px;
+    }
+  }
+}
